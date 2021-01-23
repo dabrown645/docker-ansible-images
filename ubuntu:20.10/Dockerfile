@@ -2,16 +2,23 @@ FROM ubuntu:20.10
 
 RUN apt-get update \
   && apt-get install -y --no-install-recommends \
-   apt-utils \
-   locales \
-   python3-setuptools \
-   python3-pip \
-   software-properties-common \
-   rsyslog systemd systemd-cron sudo iproute2 \
-  && rm -Rf /var/lib/apt/lists/* \
-  && rm -Rf /usr/share/doc && rm -Rf /usr/share/man \
+    apt-utils \
+    bash \
+    ca-certificates \
+    iproute2 \
+    locales \
+    python3 \
+    python3-pip \
+    python3-setuptools \
+    rsyslog \
+    software-properties-common \
+    sudo \
+    systemd \
+    systemd-cron \
+#  && rm -Rf /var/lib/apt/lists/* \
+#  && rm -Rf /usr/share/doc && rm -Rf /usr/share/man \
   && apt-get clean
-RUN sed -i 's/^\($ModLoad imklog\)/#\1/' /etc/rsyslog.conf
+#RUN sed -i 's/^\($ModLoad imklog\)/#\1/' /etc/rsyslog.conf
 
 # Fix potential UTF-8 errors with ansible-test.
 RUN locale-gen en_US.UTF-8

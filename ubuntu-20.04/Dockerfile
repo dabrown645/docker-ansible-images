@@ -2,7 +2,7 @@ FROM ubuntu:20.04
 
 RUN apt-get update \
   && apt-get install -y --no-install-recommends \
-    #apt-utils \
+    apt-utils \
     bash \
     ca-certificates \
     #iproute2 \

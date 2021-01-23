@@ -8,8 +8,8 @@ RUN apt-get update \
     iproute2 \
     locales \
     python3 \
-    #python3-pip \
-    #python3-setuptools \
+    python3-pip \
+    python3-setuptools \
     #rsyslog \
     #software-properties-common \
     sudo \

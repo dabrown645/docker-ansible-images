@@ -6,7 +6,7 @@ RUN apt-get update \
     bash \
     ca-certificates \
     iproute2 \
-    #locales \
+    locales \
     python3 \
     #python3-pip \
     #python3-setuptools \

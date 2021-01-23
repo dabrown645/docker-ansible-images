@@ -5,7 +5,7 @@ RUN apt-get update \
     #apt-utils \
     bash \
     ca-certificates \
-    #iproute2 \
+    iproute2 \
     #locales \
     python3 \
     #python3-pip \

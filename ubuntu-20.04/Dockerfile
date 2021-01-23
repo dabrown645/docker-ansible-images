@@ -10,8 +10,8 @@ RUN apt-get update \
     python3 \
     python3-pip \
     python3-setuptools \
-    #rsyslog \
-    #software-properties-common \
+    rsyslog \
+    software-properties-common \
     sudo \
     #systemd \
     #systemd-cron \

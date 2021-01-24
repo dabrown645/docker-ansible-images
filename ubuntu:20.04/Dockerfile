@@ -15,10 +15,10 @@ RUN apt-get update \
     sudo \
     systemd \
     systemd-cron \
-  && rm -Rf /var/lib/apt/lists/* \
-  && rm -Rf /usr/share/doc && rm -Rf /usr/share/man \
+#  && rm -Rf /var/lib/apt/lists/* \
+#  && rm -Rf /usr/share/doc && rm -Rf /usr/share/man \
   && apt-get clean
-RUN sed -i 's/^\($ModLoad imklog\)/#\1/' /etc/rsyslog.conf
+#RUN sed -i 's/^\($ModLoad imklog\)/#\1/' /etc/rsyslog.conf
 
 # Fix potential UTF-8 errors with ansible-test.
 RUN locale-gen en_US.UTF-8

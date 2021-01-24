@@ -13,8 +13,8 @@ RUN apt-get update \
     rsyslog \
     software-properties-common \
     sudo \
-    #systemd \
-    #systemd-cron \
+    systemd \
+    systemd-cron \
   #&& rm -Rf /var/lib/apt/lists/* \
   #&& rm -Rf /usr/share/doc && rm -Rf /usr/share/man \
   && apt-get clean

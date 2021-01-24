@@ -21,7 +21,7 @@ RUN apt-get update \
 RUN sed -i 's/^\($ModLoad imklog\)/#\1/' /etc/rsyslog.conf
 
 # Fix potential UTF-8 errors with ansible-test.
-RUN locale-gen en_US.UTF-8
+#RUN locale-gen en_US.UTF-8
 
 #RUN pip3 install ansible
 

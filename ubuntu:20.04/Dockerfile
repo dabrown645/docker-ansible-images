@@ -2,19 +2,19 @@ FROM ubuntu:20.04
 
 RUN apt-get update \
   && apt-get install -y --no-install-recommends \
-    #apt-utils \
+    apt-utils \
     bash \
     ca-certificates \
-    #iproute2 \
-    #locales \
+    iproute2 \
+    locales \
     python3 \
-    #python3-pip \
-    #python3-setuptools \
-    #rsyslog \
-    #software-properties-common \
+    python3-pip \
+    python3-setuptools \
+    rsyslog \
+    software-properties-common \
     sudo \
-    #systemd \
-    #systemd-cron \
+    systemd \
+    systemd-cron \
   #&& rm -Rf /var/lib/apt/lists/* \
   #&& rm -Rf /usr/share/doc && rm -Rf /usr/share/man \
   && apt-get clean

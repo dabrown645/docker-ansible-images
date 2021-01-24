@@ -26,13 +26,13 @@ RUN locale-gen en_US.UTF-8
 RUN pip3 install ansible
 
 # Install Ansible inventory file.
-#RUN mkdir -p /etc/ansible
-#RUN echo "[local]\nlocalhost ansible_connection=local" > /etc/ansible/hosts
+RUN mkdir -p /etc/ansible
+RUN echo "[local]\nlocalhost ansible_connection=local" > /etc/ansible/hosts
 
 # Remove unnecessary getty and udev targets that result in high CPU usage when using
 # multiple containers with Molecule (https://github.com/ansible/molecule/issues/1104)
-#RUN rm -f /lib/systemd/system/systemd*udev* \
-#  && rm -f /lib/systemd/system/getty.target
+RUN rm -f /lib/systemd/system/systemd*udev* \
+  && rm -f /lib/systemd/system/getty.target
 
-#VOLUME ["/sys/fs/cgroup", "/tmp", "/run"]
-#CMD ["/lib/systemd/systemd"]
+VOLUME ["/sys/fs/cgroup", "/tmp", "/run"]
+CMD ["/lib/systemd/systemd"]
